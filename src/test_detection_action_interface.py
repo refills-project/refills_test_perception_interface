@@ -1,4 +1,4 @@
-#/bin/python
+#!/usr/bin/env python
 
 from os import sys, listdir
 import os
@@ -16,8 +16,6 @@ import cv2
 import actionlib
 import refills_msgs.msg
 
-# Ros libraries
-import roslib
 import rospy
 
 # Ros Messages
@@ -81,10 +79,12 @@ def call_action_client(file_pairs,  topic_name='/refills_perception/detect_facin
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser("Test the detection action client on recorded images")
-    parser.add_argument('-p','--path',help='path to folder holding images')
+    parser.add_argument('-p','--path',help='path to folder holding images and json files')
 
     args = parser.parse_args()
-    print args.path
+    if args.path == None:
+        parser.print_help()
+        exit()
 
     rospy.init_node('test_verification_client')
 
