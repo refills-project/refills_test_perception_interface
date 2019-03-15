@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>refills_test_perception_interface</name>
+  <version>0.0.0</version>
+  <description>The refills_test_perception_interface package</description>
+
+  <maintainer email="balintbe@cs.uni-bremen.de">Ferenc Balint-Benczedi</maintainer>
+
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>refills_msgs</depend>
+  <depend>rospy</depend>
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
